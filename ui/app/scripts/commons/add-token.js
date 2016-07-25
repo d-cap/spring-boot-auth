@@ -16,7 +16,6 @@
 
   module.factory("addToken", ['$q', 'CurrentUser', addToken]);
   module.config(function($httpProvider) {
-    console.log('intercept!');
     $httpProvider.interceptors.push("addToken");
   });
 

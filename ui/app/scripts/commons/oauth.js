@@ -21,7 +21,7 @@
         scope: "openid"
       });
 
-      return $http.post("http://ui-client:ui-secret@localhost:8081/uaa/oauth/token", data, config).then(function(response) {
+      return $http.post("http://localhost:8081/uaa/oauth/token", data, config).then(function(response) {
         return response.data;
       });
     };

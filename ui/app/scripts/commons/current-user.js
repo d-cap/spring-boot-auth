@@ -3,6 +3,8 @@
 
   var currentUser = function(localStorage) {
 
+    var USERKEY = "utoken";
+
     var initProfile = function() {
       var user = {
         username: "",
@@ -17,7 +19,7 @@
     var setProfile = function(username, token) {
       profile.username = username;
       profile.token = token;
-      localStorage.add(localStorage.USERKEY, profile);
+      localStorage.add(USERKEY, profile);
     };
 
     var profile = initProfile();
